@@ -13,6 +13,7 @@ class Home extends GetWidget<AuthController> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.pinkAccent,
       appBar: AppBar(
         actions: [
           IconButton(
@@ -24,28 +25,44 @@ class Home extends GetWidget<AuthController> {
         ],
       ),
       drawer: OurDrawer(),
-      body: Stack(
-              children: [
-                Column(
-                  children: <Widget>[
-                    MainSlider(),
-                    Container(
-                      transform: Matrix4.translationValues(0.0, -40.0, 0.0),
-                      child: CategoryView()
+      body: SingleChildScrollView(
+              child: Stack(
+                children: [
+                  Column(
+                    children: <Widget>[
+                      MainSlider(),
+                      Container(
+                        transform: Matrix4.translationValues(0.0, -40.0, 0.0),
+                        child: CategoryView()
+                        ),
+                        SizedBox(height: 0,),
+                      Container(
+                        child: Text('Recent Products',
+                        style: TextStyle(
+                          color: Colors.white,
+                          fontSize: 30,
+                        )),
                       ),
-                      SizedBox(height: 0,),
-                    Container(
-                      child: Text('Recent Products'),
-                    ),
-                    SizedBox(height: 20,),
-                    Container(
-                      height: 320,
-                      child: Products(),
-                    ),
-                  ],
-                ),
-              ],
-            ),       
+                      SizedBox(height: 20,),
+                      Container(
+                        decoration: BoxDecoration(
+                          color: Colors.white,
+                          borderRadius: BorderRadius.only(
+                            topRight: Radius.circular(20),
+                            topLeft: Radius.circular(20),
+                          ),
+                        ),
+                        height: 500,
+                        child: Padding(
+                          padding: const EdgeInsets.only(top: 30.0),
+                          child: Products(),
+                        ),
+                      ),
+                    ],
+                  ),
+                ],
+              ),
+      ),       
     );
   }
 }

@@ -27,7 +27,7 @@ class CategoryView extends StatelessWidget {
             Center(
               child: Category(
                   image_location: 'assets/images/cat/cat2.png',
-                  image_caption: 'UnStitched'
+                  image_caption: 'Un Done'
               ),
             ),
             Center(
