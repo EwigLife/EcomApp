@@ -15,10 +15,11 @@ class Home extends GetWidget<AuthController> {
     return Scaffold(
       backgroundColor: Colors.pinkAccent,
       appBar: AppBar(
+        title: Center(child: Text('R & R APPARELS')),
         actions: [
           IconButton(
             icon: Icon(Icons.exit_to_app),
-            onPressed: () {
+            onPressed: () { 
               controller.signOut();
             },
           ),
@@ -62,7 +63,7 @@ class Home extends GetWidget<AuthController> {
                   ),
                 ],
               ),
-      ),       
+            ),       
     );
   }
 }
