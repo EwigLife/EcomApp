@@ -8,7 +8,7 @@ class CategoryView extends StatelessWidget {
       padding: const EdgeInsets.only(top: 10.0),
       child: Container(
         decoration: BoxDecoration(
-          color: Colors.white,
+          color: Colors.white70,
           borderRadius: BorderRadius.only(
             topRight: Radius.circular(20),
             topLeft: Radius.circular(20),

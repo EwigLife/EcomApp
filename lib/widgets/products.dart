@@ -85,7 +85,7 @@ class _ProductsState extends State<Products> {
           prodName: productList[index]['name'],
           prodPicture: productList[index]['picture'],
           prodOldPrice: productList[index]['old_price'],
-          prodPrics: productList[index]['price'],
+          prodPrice: productList[index]['price'],
         );
       },
     );
@@ -96,13 +96,13 @@ class SingleProducts extends StatelessWidget {
   final prodName;
   final prodPicture;
   final prodOldPrice;
-  final prodPrics;
+  final prodPrice;
 
   const SingleProducts({Key key, 
   this.prodName, 
   this.prodPicture, 
   this.prodOldPrice, 
-  this.prodPrics}) : super(key: key);
+  this.prodPrice}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -113,9 +113,20 @@ class SingleProducts extends StatelessWidget {
           child: InkWell(onTap: (){},
           child: GridTile(
             footer: Container(
-              color: Colors.white,
+              color: Colors.white70,
               child: ListTile(
-                leading: Text(prodName,),
+                leading: Text(prodName),
+                title: Text('Rs:$prodPrice', 
+                style: TextStyle(
+                  fontSize: 14,
+                       ),
+                ),
+                subtitle: Text('Rs:$prodOldPrice', 
+                style: TextStyle(
+                  fontSize: 12,
+                  decoration: TextDecoration.lineThrough,
+                       ),
+                ),
               ),
             ),
             child: Image.asset(prodPicture,

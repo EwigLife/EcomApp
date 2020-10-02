@@ -32,7 +32,7 @@ class Home extends GetWidget<AuthController> {
                     children: <Widget>[
                       MainSlider(),
                       Container(
-                        transform: Matrix4.translationValues(0.0, -40.0, 0.0),
+                        transform: Matrix4.translationValues(0.0, -30.0, 0.0),
                         child: CategoryView()
                         ),
                         SizedBox(height: 0,),
@@ -46,7 +46,7 @@ class Home extends GetWidget<AuthController> {
                       SizedBox(height: 20,),
                       Container(
                         decoration: BoxDecoration(
-                          color: Colors.white,
+                          color: Colors.white70,
                           borderRadius: BorderRadius.only(
                             topRight: Radius.circular(20),
                             topLeft: Radius.circular(20),
