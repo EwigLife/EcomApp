@@ -1,0 +1,11 @@
+/* 
+  Localizable.strings
+  Runner
+
+  Created by syed Zain ul hassan qadri on 08/09/2020.
+  
+*/
+
+"This app requires access to the camera." = "This app requires access to the camera.";
+"Cancel"="Cancel";
+"Allow"="Allow";
